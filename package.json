@@ -1,0 +1,26 @@
+{
+  "name": "technical-seo-json-ld-schema-broken-link-auditor",
+  "version": "2.0.0",
+  "description": "Comprehensive technical SEO crawler: measures TTFB latency, title/meta tags, canonicals, H1-H6 hierarchy, missing image alt tags, JSON-LD validation, and dead links.",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "technical-seo-json-ld-schema-broken-link-auditor": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "seo-audit",
+    "technical-seo",
+    "broken-link-checker",
+    "schema-org",
+    "json-ld",
+    "opengraph",
+    "seo-tools",
+    "web-crawler",
+    "agency-automation",
+    "wcag"
+  ],
+  "license": "MIT"
+}
