@@ -1,51 +1,91 @@
-# 45-Point Technical SEO, Broken Link, OpenGraph & Schema.org JSON-LD Auditor
+# Technical Seo Json Ld Schema Broken Link Auditor (Powered by Technical SEO, Broken Link, Schema.org & Security Auditor)
 
-[![Cloud Actor](https://img.shields.io/badge/Apify_Cloud_Actor-%240.50_%2F_1k_Results-00b4d8?style=for-the-badge)](https://apify.com/lucacelli/seo-technical-audit-broken-link-schema-analyzer)
-[![Turnkey Pack](https://img.shields.io/badge/Get_Turnkey_n8n_%2B_CLI_Pack-%249-10b981?style=for-the-badge)](https://buy.polar.sh/polar_cl_aMT3yntNeGKZcDif3PXVlMKi1F2fhdIwSlP1e2Ti2gN)
-[![Agency Mega Bundle](https://img.shields.io/badge/All_30_Packs_%26_10_Chrome_Extensions-%2439_Bundle-f59e0b?style=for-the-badge)](https://buy.polar.sh/polar_cl_wNd92BUpp1y37jeYkBbeSrlCka5EWrmmg7TGN0DPTYY)
+[![Run on Apify Cloud](https://img.shields.io/badge/Apify_Cloud_Actor-Run_Now_(%240.80%2F1k)-16a34a?style=for-the-badge&logo=apify)](https://apify.com/lucacelli/seo-technical-audit-broken-link-schema-analyzer)
+[![Interactive API Playground](https://img.shields.io/badge/Live_API_Playground-Try_in_Browser-0284c7?style=for-the-badge)](https://ocakciomursel-pixel.github.io/b2b-domain-contact-tech-enricher/)
+[![All Apify Actors](https://img.shields.io/badge/Apify_Store-@lucacelli-38bdf8?style=for-the-badge)](https://apify.com/lucacelli)
 
-> **Comprehensive technical SEO crawler: measures TTFB latency, title/meta tags, canonicals, H1-H6 hierarchy, missing image alt tags, JSON-LD validation, and dead links.**
-
----
-
-## ⚡ Instant Cloud & Pro Automation Options
-
-| Option | Best For | Pricing | Instant Access Link |
-| :--- | :--- | :--- | :--- |
-| **1. Cloud Actor (Apify Store)** | Run 1,000 to 1,000,000+ domains in the cloud with residential proxies, scheduling, and CSV/JSON/Excel/API export | **$0.50 / 1,000 results** *(75% cheaper than market)* | **[Run Cloud Actor on Apify →](https://apify.com/lucacelli/seo-technical-audit-broken-link-schema-analyzer)** |
-| **2. Turnkey n8n / Make.com + Pro CLI Pack** | Importable n8n `.json` workflow, Make.com blueprint, and unlimited standalone Node.js bulk CLI | **$9 One-Time** | **[Buy Instant Pack ($9) →](https://buy.polar.sh/polar_cl_aMT3yntNeGKZcDif3PXVlMKi1F2fhdIwSlP1e2Ti2gN)** |
-| **3. All-in-One Agency Mega Pass (30-in-1)** | All **20 Turnkey n8n & CLI Packs** + All **10 Commercial Manifest V3 Chrome Extensions** | **$39 One-Time** *(Save 85%)* | **[Get Agency Mega Bundle ($39) →](https://buy.polar.sh/polar_cl_wNd92BUpp1y37jeYkBbeSrlCka5EWrmmg7TGN0DPTYY)** |
-| **4. 20-Endpoint Unified REST API** | Direct HTTP API access to 200+ B2B, SEO, E-Commerce, FinTech & Cybersecurity extractors | **From $9.99/mo** | **[Interactive OpenAPI 3.0 Docs →](https://ocakciomursel-pixel.github.io/b2b-domain-contact-tech-enricher/api-docs.html)** |
+> **Run a 45-point technical SEO audit across any URL list: HTTP TTFB latency, Title/Meta lengths, Canonical & robots/llms.txt checks, HSTS/CSP security headers, Schema.org JSON-LD validation, and live broken link detection.**
+>
+> 🚀 **Live on Apify Store:** **[https://apify.com/lucacelli/seo-technical-audit-broken-link-schema-analyzer](https://apify.com/lucacelli/seo-technical-audit-broken-link-schema-analyzer)** — Pay-Per-Result pricing at just **$0.80 per 1,000 pages** (`$0.0008/page`) with **$0 monthly subscription**.
 
 ---
 
-## 🚀 Quick Local Demo CLI
+## ⚡ 1-Click Cloud Execution & REST API Quickstart
+
+Run **[Technical Seo Json Ld Schema Broken Link Auditor (Powered by Technical SEO, Broken Link, Schema.org & Security Auditor)](https://apify.com/lucacelli/seo-technical-audit-broken-link-schema-analyzer)** directly in the Apify Console or call it synchronously via REST API, Python, Node.js, **n8n**, **Make.com**, **LangChain**, or **Claude Desktop (MCP)**.
+
+### Option A: Run via cURL (Synchronous JSON Output)
 
 ```bash
-git clone https://github.com/ocakciomursel-pixel/technical-seo-json-ld-schema-broken-link-auditor.git
-cd technical-seo-json-ld-schema-broken-link-auditor
-node index.js apify.com polar.sh linear.app
+curl -X POST "https://api.apify.com/v2/acts/lucacelli~seo-technical-audit-broken-link-schema-analyzer/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+  "urls": [
+    "https://apify.com",
+    "https://cloudflare.com"
+  ],
+  "checkBrokenLinks": true
+}'
 ```
 
-### Sample Output (Enterprise V2.0 Schema)
+### Option B: Run via Python (`apify-client`)
 
-```json
-{
-  "target": "apify.com",
-  "httpStatus": 200,
-  "latencyMs": 142,
-  "intelligenceScore": 94,
-  "priorityTier": "TIER-1 HIGH INTENT",
-  "extractedEmails": ["sales@apify.com", "press@apify.com"],
-  "hasSpfPolicy": true,
-  "hasDmarcPolicy": true
-}
+```python
+from apify_client import ApifyClient
+
+client = ApifyClient("YOUR_APIFY_TOKEN")
+run = client.actor("lucacelli/seo-technical-audit-broken-link-schema-analyzer").call(run_input={
+    "urls": [
+        "https://apify.com",
+        "https://cloudflare.com"
+    ],
+    "checkBrokenLinks": true
+})
+
+for item in client.dataset(run["defaultDatasetId"]).iterate_items():
+    print(item)
+```
+
+### Option C: Run via Node.js (`apify-client`)
+
+```javascript
+import { ApifyClient } from 'apify-client';
+
+const client = new ApifyClient({ token: process.env.APIFY_TOKEN });
+const run = await client.actor('lucacelli/seo-technical-audit-broken-link-schema-analyzer').call({
+  "urls": [
+    "https://apify.com",
+    "https://cloudflare.com"
+  ],
+  "checkBrokenLinks": true
+});
+const { items } = await client.dataset(run.defaultDatasetId).listItems();
+console.log(items);
 ```
 
 ---
 
-## 🌐 Live Browser Scanner & Full Catalog (200+ Cloud Scrapers)
+## 🌐 All 9 Featured Cloud Actors by [@lucacelli](https://apify.com/lucacelli)
 
-Test our live in-browser DNS MX/SPF/DMARC & B2B Tech Stack scanner or browse all 200+ cloud extractors and 10 Chrome Extensions:
+| Cloud Actor | Pricing (Pay-Per-Event) | Apify Store Link |
+| :--- | :--- | :--- |
+| **Google Maps Scraper: Places, Emails, Contacts & Reviews Pro** | **$1.50 / 1,000 places** | [Run on Apify Cloud →](https://apify.com/lucacelli/google-maps-scraper-places-emails-contacts-reviews) |
+| **B2B Domain Contact, Email, DNS & Tech Stack Enricher** | **$0.80 / 1,000 domains** | [Run on Apify Cloud →](https://apify.com/lucacelli/b2b-domain-contact-tech-enricher) |
+| **Shopify Store Product, Pricing, Stock & Merchant Contact Spy** | **$0.50 / 1,000 products** | [Run on Apify Cloud →](https://apify.com/lucacelli/shopify-store-product-contact-spy) |
+| **Website to Clean Markdown, Vector RAG Chunks & llms.txt** | **$0.50 / 1,000 pages** | [Run on Apify Cloud →](https://apify.com/lucacelli/ai-ready-website-to-markdown-rag-crawler) |
+| **Technical SEO, Broken Link, Schema.org & Security Auditor** | **$0.80 / 1,000 pages** | [Run on Apify Cloud →](https://apify.com/lucacelli/seo-technical-audit-broken-link-schema-analyzer) |
+| **GitHub Developer, Stargazer & Contributor Lead Enricher** | **$0.80 / 1,000 developers** | [Run on Apify Cloud →](https://apify.com/lucacelli/github-developer-recruiter-lead-enricher) |
+| **Greenhouse & Lever Company Job Board & Hiring Signal Scraper** | **$0.50 / 1,000 jobs** | [Run on Apify Cloud →](https://apify.com/lucacelli/ats-job-board-hiring-signal-scraper) |
+| **Reddit Subreddit, Buyer Intent & Pain-Point Lead Miner** | **$0.50 / 1,000 posts** | [Run on Apify Cloud →](https://apify.com/lucacelli/reddit-community-pain-point-trend-miner) |
+| **WordPress & WooCommerce Theme, Plugin & Agency Lead Spy** | **$0.80 / 1,000 sites** | [Run on Apify Cloud →](https://apify.com/lucacelli/wordpress-woocommerce-site-spy) |
 
-👉 **[Open Live Storefront & Interactive Scanner →](https://ocakciomursel-pixel.github.io/b2b-domain-contact-tech-enricher/)**
+---
+
+## 🔗 Live Interactive Browser Playground
+
+Test live inputs and generate ready-to-paste cURL, Python, Node.js, and n8n HTTP Request payloads in our interactive web playground:
+
+👉 **[Launch Interactive API Playground →](https://ocakciomursel-pixel.github.io/b2b-domain-contact-tech-enricher/)**
+
+## License
+MIT © [Lucacelli Cloud Data Engineering](https://apify.com/lucacelli)
